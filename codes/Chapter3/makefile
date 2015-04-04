@@ -1,0 +1,3 @@
+OBJECTS = binarySearch
+
+all: $(OBJECTS) 

@@ -1,0 +1,4 @@
+OBJECTS=firstFit
+
+all: $(OBJECTS)
+
