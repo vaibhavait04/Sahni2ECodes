@@ -128,7 +128,7 @@ int equal(TreeNode *a, TreeNode *b)
  return 0;
 }
 
-void main()
+int main()
 {
 Tree t;
 t.setup();
