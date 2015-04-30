@@ -4,7 +4,7 @@ using namespace std;
 
 enum Boolean {FALSE, TRUE};
 
-template <class T> class BST<T>; 
+template <class T> class BST; 
 
 template <class Type>
 class Element {
@@ -13,10 +13,9 @@ public:
 };
 
 template <class Type>
-class BstNode {
+class BstNode{
 
-template <class T> 
-friend class BST<T>;
+template <class T> friend class BST;
 
 public:
    Element<Type> data;
