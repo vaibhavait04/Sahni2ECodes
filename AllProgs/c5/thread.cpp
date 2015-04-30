@@ -37,7 +37,7 @@ public:
 	root->LeftThread = TRUE; root->RightThread = FALSE;
     };
     void InsertRight(ThreadedNode*, char);
-    ThreadedNode* ThreadedTree::InorderSucc(ThreadedNode*);
+    ThreadedNode* InorderSucc(ThreadedNode*);
 };
 
 ThreadedNode* ThreadedTree::InorderSucc(ThreadedNode *current)
@@ -126,7 +126,7 @@ void ThreadedTree::setup()
 
 
 
-void main()
+int main()
 {
 ThreadedTree t;
 t.setup();
