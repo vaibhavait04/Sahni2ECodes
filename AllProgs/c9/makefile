@@ -1,0 +1,3 @@
+all: deap \
+leftist \
+minmax \
