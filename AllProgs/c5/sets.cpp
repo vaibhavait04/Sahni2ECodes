@@ -54,7 +54,8 @@ int Sets::CollapsingFind(int i)
 // Find the root of the tree containing element @i@.
 // Use the collapsing rule to collapse all nodes from @i@ to the root
 {
-    for (int r = i; parent[r] > 0; r = parent[r]); // find root
+   int r; 
+    for (r = i; parent[r] > 0; r = parent[r]); // find root
     while (i != r) {
        int s = parent[i];
        parent[i] = r;
@@ -67,14 +68,15 @@ int Sets::CollapsingFind(int i)
 
 void Sets::display()
 {
-for(int i=1; i <= n; i++) cout << i ;
+int i; 
+for(i=1; i <= n; i++) cout << i ;
 cout << "\n";
 for(i=1; i <= n; i++) cout << parent[i] ;
 cout << "\n";
 }
 
 
-void main()
+int main()
 {
 /*
 
