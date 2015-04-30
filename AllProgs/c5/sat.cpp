@@ -3,7 +3,7 @@
 #define _IOSTREAM_H
 #endif
 using namespace std;
-enum Boolean { FALSE, TRUE};
+//enum Boolean { FALSE, TRUE};
 enum TypesOfData {LogicalNot, LogicalAnd, LogicalOr,
 		  LogicalTrue, LogicalFalse};
 
@@ -14,7 +14,7 @@ friend class SatTree;
 private:
     SatNode *LeftChild;
     TypesOfData data;
-    Boolean value;
+    bool value;
     SatNode *RightChild;
     SatNode() {LeftChild = RightChild = 0;};
     SatNode(TypesOfData tod, SatNode *Lefty, SatNode *Righty)
@@ -58,17 +58,15 @@ void SatTree::PostOrderEval(SatNode *s)
 	PostOrderEval(s->RightChild);
 	switch (s->data) {
 		case LogicalNot: s->value = ! s->RightChild->value; break;
-		case LogicalAnd: s->value = s->LeftChild->value && s->RightChild->value;
-				 break;
-		case LogicalOr: s->value = s->LeftChild->value || s->RightChild->value;
-				break;
-		case LogicalTrue: s->value = TRUE; break;
-		case LogicalFalse: s->value = FALSE;
+		case LogicalAnd: s->value = s->LeftChild->value && s->RightChild->value; break;
+		case LogicalOr: s->value = s->LeftChild->value || s->RightChild->value; break;
+		case LogicalTrue: s->value = true; break;
+		case LogicalFalse: s->value = false; break; 
 	}
     }
 }
 
-void main()
+int main()
 {
 SatTree t;
 t.setup();
