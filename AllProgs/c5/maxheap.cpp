@@ -47,9 +47,10 @@ cout << "\n";
 template <class Type>
 void MaxHeap<Type>::Insert(const Element<Type>& x)
 {
+int i; 
    if (n == MaxSize) {HeapFull(); return;}
    n++;
-   for (int i = n; 1; ) {
+   for (i = n; 1; ) {
        if (i == 1) break; // at root
        if (x.key <= heap[i/2].key) break;
        // move from parent to i
@@ -64,8 +65,8 @@ Element<Type>* MaxHeap<Type>::DeleteMax(Element<Type>& x)
 {
    if (!n) {HeapEmpty(); return 0;}
    x = heap[1]; Element<Type> k = heap[n]; n--;
-
-   for (int i = 1, j = 2; j <= n; )
+   int i, j; 
+   for (i = 1, j = 2; j <= n; )
    {
        if ( j < n) if (heap[j].key < heap[j+1].key) j++;
        // j points to the larger child
