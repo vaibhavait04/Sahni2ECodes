@@ -91,7 +91,7 @@ void Tree::NoStackInorder()
    } // end of outer \fBwhile\fR loop
 }
 
-void main()
+int main()
 {
 Tree t;
 t.setup();
