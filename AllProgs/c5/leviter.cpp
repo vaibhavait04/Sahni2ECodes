@@ -123,7 +123,7 @@ void Tree::LevelOrder()
     }
 }
 
-void main()
+int main()
 {
    Tree t;
    t.setup();
