@@ -129,7 +129,7 @@ void Tree::inorder()
     }
 }
 
-void main()
+int main()
 {
    Tree t;
    t.setup();
